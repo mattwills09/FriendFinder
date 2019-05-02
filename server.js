@@ -1,3 +1,4 @@
+
 //=== DEPENDENCIES ============================================
 
 var express = require("express");
@@ -39,7 +40,7 @@ var friends = [
 
 //APP.USE to link route files
 
-//=== GET ROUTES================================================
+//=== HTML GET ROUTES================================================
 
 app.get("/", function(req, res) {
     res.sendFile(path.join(__dirname, "/app/public/home.html"));
@@ -90,14 +91,12 @@ app.post("/api/friends", function(req, res) {
         console.log("Our Index: " + ourIndex);
 
         
-    friends.push(newFriend);
-    console.log("All Friends: " + friends);
+        friends.push(newFriend);
+        console.log("All Friends: " + friends);
 
-    res.json(friends[ourIndex]);
-    //LAST THING TO BE READ ^
-
+        res.json(friends[ourIndex]);
+        //^LAST THING TO BE READ ^
 });
-
 
 //=== LISTENER TO START OUR SERVER TO AWAIT REQUESTS===========
 app.listen(PORT, function() {
