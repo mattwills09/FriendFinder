@@ -30,7 +30,7 @@
     <hr>
 
     <h4><strong>Question 1</strong></h4>
-    <h4 class="font-weight-normal">Your mind is always buzzing with unexplored ideas and plans.</h4>
+    <h5 class="font-weight-normal">Your mind is always buzzing with unexplored ideas and plans.</h5>
     <select class="chosen-select" id="q1">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
@@ -39,9 +39,10 @@
       <option value="4">4</option>
       <option value="5">5 (Strongly Agree)</option>
     </select>
+    <hr>
 
     <h4><strong>Question 2</strong></h4>
-    <h4 class="font-weight-normal">Generally speaking, you rely more on your experience than your imagination.</h4>
+    <h5 class="font-weight-normal">Generally speaking, you rely more on your experience than your imagination.</h5>
     <select class="chosen-select" id="q2">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
@@ -50,10 +51,10 @@
       <option value="4">4</option>
       <option value="5">5 (Strongly Agree)</option>
     </select>
-
+    <hr>
 
     <h4><strong>Question 3</strong></h4>
-    <h4 class="font-weight-normal">You find it easy to stay relaxed and focused even when there is some pressure.</h4>
+    <h5 class="font-weight-normal">You find it easy to stay relaxed and focused even when there is some pressure.</h5>
     <select class="chosen-select" id="q3">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
@@ -62,10 +63,10 @@
       <option value="4">4</option>
       <option value="5">5 (Strongly Agree)</option>
     </select>
-
+    <hr>
 
     <h4><strong>Question 4</strong></h4>
-    <h4 class="font-weight-normal">You rarely do something just out of sheer curiosity.</h4>
+    <h5 class="font-weight-normal">You rarely do something just out of sheer curiosity.</h5>
     <select class="chosen-select" id="q4">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
@@ -74,10 +75,10 @@
       <option value="4">4</option>
       <option value="5">5 (Strongly Agree)</option>
     </select>
-
+    <hr>
 
     <h4><strong>Question 5</strong></h4>
-    <h4 class="font-weight-normal">People can rarely upset you.</h4>
+    <h5 class="font-weight-normal">People can rarely upset you.</h5>
     <select class="chosen-select" id="q5">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
@@ -86,10 +87,10 @@
       <option value="4">4</option>
       <option value="5">5 (Strongly Agree)</option>
     </select>
-
+    <hr>
 
     <h4><strong>Question 6</strong></h4>
-    <h4 class="font-weight-normal">It is often difficult for you to relate to other people’s feelings.</h4>
+    <h5 class="font-weight-normal">It is often difficult for you to relate to other people’s feelings.</h5>
     <select class="chosen-select" id="q6">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
@@ -98,10 +99,10 @@
       <option value="4">4</option>
       <option value="5">5 (Strongly Agree)</option>
     </select>
-
+    <hr>
 
     <h4><strong>Question 7</strong></h4>
-    <h4 class="font-weight-normal">In a discussion, truth should be more important than people’s sensitivities.</h4>
+    <h5 class="font-weight-normal">In a discussion, truth should be more important than people’s sensitivities.</h5>
     <select class="chosen-select" id="q7">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
@@ -110,9 +111,10 @@
       <option value="4">4</option>
       <option value="5">5 (Strongly Agree)</option>
     </select>
+    <hr>
 
     <h4><strong>Question 8</strong></h4>
-    <h4 class="font-weight-normal">You rarely get carried away by fantasies and ideas.</h4>
+    <h5 class="font-weight-normal">You rarely get carried away by fantasies and ideas.</h5>
     <select class="chosen-select" id="q8">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
@@ -121,9 +123,10 @@
       <option value="4">4</option>
       <option value="5">5 (Strongly Agree)</option>
     </select>
+    <hr>
 
     <h4><strong>Question 9</strong></h4>
-    <h5 class="font-weight-normal">You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</h5>
+    <h5 class="font-weight-normal">You like motorcycles.</h5>
     <select class="chosen-select" id="q9">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
@@ -132,9 +135,10 @@
       <option value="4">4</option>
       <option value="5">5 (Strongly Agree)</option>
     </select>
+    <hr>
 
     <h4><strong>Question 10</strong></h4>
-    <h5 class="font-weight-normal">You feel more energetic after spending time with a group of people.</h5>
+    <h5 class="font-weight-normal">You love pizza.</h5>
     <select class="chosen-select" id="q10">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
@@ -143,15 +147,12 @@
       <option value="4">4</option>
       <option value="5">5 (Strongly Agree)</option>
     </select>
-
+    <hr>
     <br>
-    <br>
 
-    <!-- Submit Button -->
     <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-motorcycle" aria-hidden="true"></i>
      Submit!
     </button>
-
     <hr>
 
     <footer class="footer">
@@ -160,7 +161,86 @@
         </div>
     </footer>
 
-</div>        
+</div>
+
+
+<div class="modal" id="bestMatchModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Most Compatible Friend Match: </h5>
+          <img id="bestMatchPic" class="materialboxed" width="600" src="">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Modal body text goes here.</p>
+          <h5 id="bestMatch"></h5>
+          <img id="bestMatchPic" class="materialboxed" width="600" src="">
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <a href="/survey" class="modal-action modal-close waves-effect waves-green btn-flat">Unhappy with your match?  Try Again!</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- ================================================== -->
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+    $("#submit").on("click", function(event) {
+        event.preventDefault();
+
+        // === VALIDATION==============
+        var valid = true;
+        if ($("#name").val() === "" || $("#photo").val() === "") {
+            valid = false;
+        }
+        else if ($("#q1").val() == "" || $("#q2").val() == "" || $("#q3").val() == "" || $("#q4").val() == "" || $("#q5").val() == "" || $("#q6").val() == "" || $("#q7").val() == "" || $("#q8").val() == "" || $("#q9").val() == "" || $("#q10").val() == "") {
+          
+            valid = false;
+        }
+    
+        if (valid == true) {
+          var newFriend = {
+              name: $("#name").val().trim(),
+              photo: $("#photo").val().trim(),
+              scores: [
+                $("#q1").val(),
+                $("#q2").val(),
+                $("#q3").val(),
+                $("#q4").val(),
+                $("#q5").val(),
+                $("#q6").val(),
+                $("#q7").val(),
+                $("#q8").val(),
+                $("#q9").val(),
+                $("#q10").val(),
+              ]
+            };
+
+            $.post("http://localhost:8000/api/friends", newFriend)
+              .then(function(data) {
+              console.log(data);
+
+              $("#bestMatchModal").modal("toggle");
+              $("#bestMatch").html(data.name);
+              $("#bestMatchPic").attr("src", data.photo);
+            });
+        }
+        else {
+            alert("Please fill out ALL fields!");
+        }
+
+    });
+});
+
+</script>
 
 </body>
 </html>
