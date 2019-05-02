@@ -17,14 +17,27 @@ var friends = [
         name: "Sadie Williams",
         photo: "https://i.imgur.com/9a7cAAh.jpg",
         scores: [5, 5, 5, 5, 5, 5, 5, 5, 5, 5]
-    },
-    {
+    },{
         name: "Kendall Snowcone",
-        photo: "http://www.abergavennychronicle.com/images/news/2019/1314_chris-copner-abergavenny-ice-cream-man-copy.jpg",
-        scores: [2, 2, 2, 2, 2, 2, 2, 2, 2, 2] 
+        photo: "http://blog.wildfang.com/wp-content/uploads/2015/11/500x500xFullSizeRender-10.jpg.pagespeed.ic.Ab25bBaGfu.jpg",
+        scores: [2, 1, 2, 1, 2, 1, 2, 1, 2, 2] 
+    },{
+        name: "Johnny Agreeable",
+        photo: "https://www.abc.net.au/reslib/200803/r235728_948392.jpg",
+        scores: [2, 5, 1, 2, 4, 5, 5, 2, 1, 4] 
+    },{
+        name: "Jamie Risktaker",
+        photo: "http://www.motorcycleinsurance.com/wp-content/uploads/2012/02/Mark-Papa-Guardado.jpg",
+        scores: [3, 1, 4, 5, 1, 1, 2, 4, 5, 5] 
+    },{
+        name: "Esteban Alejandro",
+        photo: "https://sapthapadhi.com/wp-content/uploads/thon/black-guy-hairstyles-beautiful-cool-black-men-hair-2013-mens-hairstyles-2018-of-black-guy-hairstyles-300x210.jpg",
+        scores: [4, 4, 4, 5, 2, 3, 4, 5, 5, 5] 
     }
+    
 ];
 
+//APP.USE to link route files
 
 //=== GET ROUTES================================================
 
@@ -61,12 +74,12 @@ app.post("/api/friends", function(req, res) {
         
         const reducer = (accumulator, currentValue) => accumulator + currentValue;
         
-        console.log("Difference Array: " + differenceArr);
-        var ourDifference= differenceArr.reduce(reducer);
-        sumsOfDifferences.push(ourDifference);
+        // console.log("Difference Array: " + differenceArr);
+        var ourDifference = differenceArr.reduce(reducer);
+        sumsOfDifferences.push(Math.abs(ourDifference));
 
         console.log("Our Difference: " + ourDifference);
-        console.log("sums of Differences: " + sumsOfDifferences);
+        console.log("Sums of Differences: " + sumsOfDifferences);
     }
 
         var min = Math.min.apply(Math, sumsOfDifferences)
@@ -82,28 +95,6 @@ app.post("/api/friends", function(req, res) {
 
     res.json(friends[ourIndex]);
     //LAST THING TO BE READ ^
-
-// });
-
-
-    // for (var i = 0; i < friendSurvey.scores.length; i++) {
-    //     friendSurvey.scores[i] = parseInt(friendSurvey.scores[i]);
-    // }
-    // var bestMatchIndex = 0;
-    // var minDifference = 40;
-    // var totalDifference = 0;
-
-    // for (var j = 0; j < friends[i].scores.lenght; j++) {
-    //     var difference = Math.abs(friendSurvey.scores[j] - friends[i].scores[j]);
-    //     totalDifference = difference;
-    // }
-    // if (totalDifference < minDifference) {
-    //     bestMatchIndex = i;
-    //     minDifference = totalDifference;
-    // }
-
-    // friends.push(friendSurvey);
-    // res.json(friends[bestMatchIndex]);
 
 });
 
