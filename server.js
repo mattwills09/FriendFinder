@@ -48,6 +48,13 @@ app.use(function (req, res, next, reducer, event) {
     console.log('Time: %d', Date.now());
 });
 
+//CORS ISSUE
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+  });
+
 //=== HTML GET ROUTES================================================
 
 app.get("/", function(req, res) {
