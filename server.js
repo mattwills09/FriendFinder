@@ -72,7 +72,19 @@ app.get("/api/friends", function(req, res) {
 });
 
 app.post("/api/friends", function(req, res) {
-    var newFriend = req.body;
+    // var newFriend = req.body;
+
+    const newFriend = {
+        name: req.body.name,
+        photo: req.body.photo,
+        scores: req.body.scores.map(function(n) {
+            return Number(n);
+        })
+    };
+
+    //map()
+
+    console.log(JSON.stringify(newFriend));
 
     console.log("New Friend: " + newFriend);
 
