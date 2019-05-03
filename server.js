@@ -84,7 +84,7 @@ app.post("/api/friends", function(req, res) {
 
         for (var j = 0; j < currentFriend.scores.length; j++) {
             var difference = parseInt(currentFriend.scores[j]) - parseInt(newFriend.scores[j]);
-            differenceArr.push(difference);
+            differenceArr.push(Math.abs(difference));
             console.log("Difference: " + difference);
         }
         
@@ -92,7 +92,7 @@ app.post("/api/friends", function(req, res) {
         
         // console.log("Difference Array: " + differenceArr);
         var ourDifference = differenceArr.reduce(reducer);
-        sumsOfDifferences.push(Math.abs(ourDifference));
+        sumsOfDifferences.push(ourDifference);
 
         console.log("Our Difference: " + ourDifference);
         console.log("Sums of Differences: " + sumsOfDifferences);
